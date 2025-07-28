@@ -1,0 +1,8 @@
+build-essential
+curl
+file
+git
+ca-certificates
+apt-transport-https
+software-properties-common
+lsb-release

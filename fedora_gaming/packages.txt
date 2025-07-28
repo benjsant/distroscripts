@@ -7,10 +7,8 @@ gamemode
 wine
 wine-core
 wine-mono
-wine-gecko
 winetricks
 cabextract
-vkd3d
 SDL2
 SDL2_image
 SDL2_mixer
@@ -66,3 +64,4 @@ cairo
 cairo-gobject
 gnome-terminal
 heroic-games-launcher-bin
+protonplus
