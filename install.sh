@@ -34,6 +34,7 @@ echo "📦 Quelle Distrobox souhaitez-vous installer ?"
 echo "1) Fedora Gaming"
 echo "2) Ubuntu Dev Hugo"
 echo "3) Ubuntu Dev Python"
+echo "4) Ubuntu Dev IA"
 echo "q) Quitter"
 read -rp "👉 Votre choix : " choix
 
