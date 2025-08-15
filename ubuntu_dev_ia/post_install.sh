@@ -38,9 +38,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/code sta
 sudo apt update
 sudo apt install -y code
 
-mkdir -p "$HOME/.config/Code/User"
-echo '{ "locale": "fr" }' > "$HOME/.config/Code/User/locale.json"
-
 echo "🎮 Configuration GPU : $MODE"
 case "$MODE" in
   rocm)
@@ -56,6 +53,11 @@ case "$MODE" in
     echo "⚠️ Mode GPU inconnu : $MODE"
     ;;
 esac
+
+### 🎨 Prompt personnalisé (optionnel)
+if ! grep -q '📦[\u@\h \W]\\$' ~/.bashrc; then
+    echo 'export PS1="📦[\u@\h \W]\\$ "' >> ~/.bashrc
+fi
 
 echo ""
 echo "✅ Installation terminée. Ollama, pyenv, VS Code et Python $LATEST_PYTHON sont prêts."

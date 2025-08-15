@@ -29,6 +29,29 @@ echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 
+### 🔧 NVM + Node.js LTS
+if [ ! -d "$HOME/.nvm" ]; then
+    echo "🌐 Installation de NVM et Node.js LTS..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+else
+    echo "✅ NVM déjà installé."
+fi
+
+# Charger NVM
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Installer Node LTS si pas déjà installé
+if ! command -v node &>/dev/null; then
+    nvm install --lts
+fi
+
+### 🎨 Prompt personnalisé (optionnel)
+if ! grep -q '📦[\u@\h \W]\\$' ~/.bashrc; then
+    echo 'export PS1="📦[\u@\h \W]\\$ "' >> ~/.bashrc
+fi
+
 # 🐍 Initialisation de pyenv dans le shell
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
