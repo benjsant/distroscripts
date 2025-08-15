@@ -34,6 +34,7 @@ echo "📦 Quelle Distrobox souhaitez-vous installer ?"
 echo "1) Fedora Gaming"
 echo "2) Ubuntu Dev Hugo"
 echo "3) Ubuntu Dev Python"
+echo "4) Ubuntu Dev IA"
 echo "q) Quitter"
 read -rp "👉 Votre choix : " choix
 
@@ -49,6 +50,10 @@ case "$choix" in
   3)
     echo "🚀 Installation de Ubuntu Dev Python..."
     ./ubuntu_dev_python/install.sh --home "$HOME/distrobox/ubuntu_dev_python"
+    ;;
+  4)
+    echo "🚀 Installation de Ubuntu Dev IA..."
+    ./ubuntu_dev_ia/install.sh --home "$HOME/distrobox/ubuntu_dev_ia"
     ;;
   q|Q)
     echo "👋 Sortie du script."

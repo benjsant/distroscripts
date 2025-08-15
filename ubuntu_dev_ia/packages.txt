@@ -1,3 +1,8 @@
+ca-certificates
+gnupg
+lsb-release
+cmake
+make
 build-essential
 curl
 git

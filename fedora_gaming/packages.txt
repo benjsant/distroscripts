@@ -65,3 +65,8 @@ cairo-gobject
 gnome-terminal
 heroic-games-launcher-bin
 protonplus
+xapps
+fuse
+fuse-libs
+antimicrox
+fluidsynth
